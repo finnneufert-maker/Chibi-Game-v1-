@@ -53,7 +53,7 @@ jobs:
                   minSdk = 24
                   targetSdk = 35
                   versionCode = 2
-                  versionName = "1.1"
+                  versionName = "1.2"
               }
           }
           EOF
@@ -106,7 +106,7 @@ jobs:
                   settings.setCacheMode(WebSettings.LOAD_NO_CACHE);
                   webView.clearCache(true);
                   webView.setWebViewClient(new WebViewClient());
-                  webView.loadUrl("https://finnneufert-maker.github.io/Chibi-Game-v1-/?app=1.1");
+                  webView.loadUrl("https://finnneufert-maker.github.io/Chibi-Game-v1-/?app=1.2");
                   setContentView(webView);
               }
 
@@ -133,4 +133,4 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release delete mochimori-v1.0 --cleanup-tag --yes || true
-          gh release create mochimori-v1.0 MochiMori.apk --title "MochiMori 1.1" --notes "Neue Kleidung, Pets, Reaktionen und Minispiele. Die App lädt immer die aktuelle Spielversion."
+          gh release create mochimori-v1.0 MochiMori.apk --title "MochiMori 1.0" --notes "Erste installierbare Android-Version von MochiMori."
